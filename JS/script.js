@@ -45,19 +45,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
       body: new URLSearchParams(data)
     });
     
-    const statusEl = document.getElementById("contactStatus");
+    clearTimeout(contactStatusTimer);
     if (response.ok) {
-      statusEl.textContent = "✅ Request sent successfully! We'll get back to you soon.";
-      statusEl.className = "contact-status success";
+      contactStatus.textContent = "✅ Request sent successfully! We'll get back to you soon.";
+      contactStatus.className = "contact-status success";
       document.getElementById("contactForm").reset();
     } else {
-      statusEl.textContent = "❌ Error sending message. Please try again.";
-      statusEl.className = "contact-status error";
+      contactStatus.textContent = "❌ Error sending message. Please try again.";
+      contactStatus.className = "contact-status error";
     }
   } catch (error) {
     console.error('Error:', error);
-    const statusEl = document.getElementById("contactStatus");
-    statusEl.textContent = "❌ Error sending message. Please check your connection.";
-    statusEl.className = "contact-status error";
+    contactStatus.textContent = "❌ Error sending message. Please check your connection.";
+    contactStatus.className = "contact-status error";
+  } finally {
+    contactStatusTimer = setTimeout(() => {
+      contactStatus.textContent = "";
+      contactStatus.className = "contact-status";
+    }, 5000);
   }
 });
