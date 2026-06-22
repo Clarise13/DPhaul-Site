@@ -26,6 +26,8 @@ window.addEventListener('scroll', function() {
 });
 
 // ===== CONTACT FORM =====
+const contactStatus = document.getElementById("contactStatus");
+let contactStatusTimer;
 document.getElementById("contactForm").addEventListener("submit", async function(e) {
   e.preventDefault();
 
@@ -37,20 +39,25 @@ document.getElementById("contactForm").addEventListener("submit", async function
   };
 
   try {
-    const response = await fetch('/contact', {
+    const response = await fetch('https://formspree.io/f/xaqgydda', {
       method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
+      headers: { "Accept": "application/json" },
+      body: new URLSearchParams(data)
     });
     
+    const statusEl = document.getElementById("contactStatus");
     if (response.ok) {
-      alert("✅ Request sent successfully! We'll get back to you soon.");
+      statusEl.textContent = "✅ Request sent successfully! We'll get back to you soon.";
+      statusEl.className = "contact-status success";
       document.getElementById("contactForm").reset();
     } else {
-      alert("❌ Error sending message. Please try again.");
+      statusEl.textContent = "❌ Error sending message. Please try again.";
+      statusEl.className = "contact-status error";
     }
   } catch (error) {
     console.error('Error:', error);
-    alert("❌ Error sending message. Please check your connection.");
+    const statusEl = document.getElementById("contactStatus");
+    statusEl.textContent = "❌ Error sending message. Please check your connection.";
+    statusEl.className = "contact-status error";
   }
 });

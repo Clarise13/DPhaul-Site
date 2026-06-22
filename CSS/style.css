@@ -455,6 +455,29 @@ button:hover {
   box-shadow: 0 5px 15px rgba(127, 14, 18, 0.4);
 }
 
+.contact-status {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+.contact-status.success {
+  background: rgba(39, 174, 96, 0.12);
+  color: #1d6f2d;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.contact-status.error {
+  background: rgba(192, 57, 43, 0.12);
+  color: #a82318;
+  border: 1px solid rgba(192, 57, 43, 0.3);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: #7f0e12;

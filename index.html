@@ -210,22 +210,21 @@
 <section id="contact" class="contact">
   <h2>CONTACT US</h2>
 
-  <form
-  action="https://formspree.io/f/xaqgydda"
-  method="POST"
->
+  <form id="contactForm" action="https://formspree.io/f/xaqgydda" method="POST">
 
-  <input
-    type="textName"
-    required
-  >
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      required
+    >
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Email"
-    required
-  >
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+    >
 
   <select name="service" required>
     <option value="">Select Service</option>
@@ -245,6 +244,8 @@
   <button type="submit">
     Send Request
   </button>
+
+  <div id="contactStatus" class="contact-status" aria-live="polite"></div>
 
 </form>
 </section>
