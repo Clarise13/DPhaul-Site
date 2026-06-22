@@ -732,7 +732,7 @@ button:hover {
     top: 65px;
     left: 0;
     right: 0;
-    background: #38050f;
+    background: #630d13;
     flex-direction: column;
     gap: 0;
     padding: 20px;
@@ -747,7 +747,7 @@ button:hover {
 
   .navbar ul li {
     padding: 12px 0;
-    border-bottom: 1px solid rgba(248, 249, 250, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .navbar ul li:last-child {
@@ -757,6 +757,7 @@ button:hover {
   .navbar a {
     font-size: 16px;
     display: block;
+    color: #ffffff;
   }
 
   /* HERO */
@@ -989,7 +990,7 @@ button:hover {
     top: 60px;
     left: 0;
     right: 0;
-    background: #38050f;
+    background: #630d13;
     flex-direction: column;
     gap: 0;
     padding: 15px;
