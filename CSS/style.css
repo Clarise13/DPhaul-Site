@@ -489,6 +489,17 @@ button:hover {
   color: rgba(248, 249, 250, 0.8);
 }
 
+.footer-section a {
+  color: #fdd835;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
