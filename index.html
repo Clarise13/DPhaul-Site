@@ -210,22 +210,43 @@
 <section id="contact" class="contact">
   <h2>CONTACT US</h2>
 
-  <form id="contactForm">
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
+  <form
+  action="https://formspree.io/f/xaqgydda"
+  method="POST"
+>
 
-    <select required>
-      <option>Select Service</option>
-      <option>Building</option>
-      <option>Paving</option>
-      <option>Tiling</option>
-      <option>Painting</option>
-      <option>Plumbing</option>
-    </select>
+  <input
+    type="textName"
+    required
+  >
 
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Send Request</button>
-  </form>
+  <input
+    type="email"
+    name="email"
+    placeholder="Email"
+    required
+  >
+
+  <select name="service" required>
+    <option value="">Select Service</option>
+    <option value="Building">Building</option>
+    <option value="Paving">Paving</option>
+    <option value="Tiling">Tiling</option>
+    <option value="Painting">Painting</option>
+    <option value="Plumbing">Plumbing</option>
+  </select>
+
+  <textarea
+    name="message"
+    placeholder="Message"
+    required
+  ></textarea>
+
+  <button type="submit">
+    Send Request
+  </button>
+
+</form>
 </section>
 
 <script src="JS/script.js"></script>
