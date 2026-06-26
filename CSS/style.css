@@ -1264,3 +1264,24 @@ button:hover {
     font-size: 11px;
   }
 }
+/* ===========================
+   PROJECT VIDEOS
+=========================== */
+
+.process-videos {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.process-videos h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.process-videos video {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
