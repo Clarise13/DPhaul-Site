@@ -1264,28 +1264,39 @@ button:hover {
     font-size: 11px;
   }
 }
-/* ===========================
-   PROJECT VIDEOS
-=========================== */
-
-.process-videos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+/* VIDEO GRID LAYOUT */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-.process-videos h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.process-videos video {
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* VIDEO CARD */
+.video-card {
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+/* VIDEO INSIDE CARD */
+.video-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* TITLE UNDER VIDEO */
+.video-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 }
